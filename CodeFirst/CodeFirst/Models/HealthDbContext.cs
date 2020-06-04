@@ -11,6 +11,7 @@ namespace CodeFirst.Models
 
         public DbSet<Doctor> Doctors { get; set; }
 
+
         public HealthDbContext()
         {
 

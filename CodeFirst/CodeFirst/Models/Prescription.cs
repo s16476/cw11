@@ -13,9 +13,21 @@ namespace CodeFirst.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPrescription { get; set; }
 
+        [Required]
         public DateTime Date { get; set; }
 
+        [Required]
         public DateTime DueDate { get; set; }
+
+        [ForeignKey("Patient")]
+        public int IdPatient { get; set; }
+
+        public virtual Patient Patient { get; set; }
+
+        [ForeignKey("Doctor")]
+        public int IdDoctor { get; set; }
+
+        public virtual Doctor Doctor { get; set; }
 
     }
 }

@@ -24,13 +24,19 @@ namespace CodeFirst.Controllers
         [HttpGet]
         public IActionResult GetDoctors()
         {
-            return Ok(context.GetDoctors());
+            var dc = context.GetDoctors();
+            var res = new List<DoctorDTO>();
+            foreach(Doctor d in dc)
+            {
+                res.Add(new DoctorDTO(d));
+            }
+            return Ok(res);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetDoctor(int id)
         {
-            return Ok(context.GetDoctor(id));
+            return Ok(new DoctorDTO(context.GetDoctor(id)));
         }
 
         [HttpPost]
@@ -43,12 +49,14 @@ namespace CodeFirst.Controllers
         [HttpPut]
         public IActionResult UpdateDoctor(Doctor doctor)
         {
+            context.updateDoctor(doctor);
             return Ok("Doctor " + doctor.IdDoctor + " updated!");
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteDoctor(int id)
         {
+            context.deleteDoctor(id);
             return Ok("Doctor " + id + " deleted!");
         }
 

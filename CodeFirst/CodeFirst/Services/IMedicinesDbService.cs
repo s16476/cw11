@@ -9,7 +9,15 @@ namespace CodeFirst.Services
     public interface IMedicinesDbService
     {
 
+        Doctor GetDoctor(int id);
+
         IEnumerable<Doctor> GetDoctors();
+
+        Doctor AddDoctor(Doctor doctor);
+
+        void updateDoctor(Doctor doctor);
+
+        void deleteDoctor(int id);
 
     }
 }

@@ -45,8 +45,7 @@ namespace CodeFirst.Migrations
                 table: "Prescription_Medicaments",
                 nullable: false,
                 oldClrType: typeof(int),
-                oldType: "int")
-                .OldAnnotation("SqlServer:Identity", "1, 1");
+                oldType: "int");
 
             migrationBuilder.AddColumn<int>(
                 name: "IdPrescription",
@@ -406,8 +405,7 @@ namespace CodeFirst.Migrations
                 table: "Prescription_Medicaments",
                 type: "int",
                 nullable: false,
-                oldClrType: typeof(int))
-                .Annotation("SqlServer:Identity", "1, 1");
+                oldClrType: typeof(int));
 
             migrationBuilder.AlterColumn<string>(
                 name: "LastName",

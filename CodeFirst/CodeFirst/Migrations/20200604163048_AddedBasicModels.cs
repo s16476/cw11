@@ -18,8 +18,7 @@ namespace CodeFirst.Migrations
                 name: "IdDoctor",
                 table: "Doctors",
                 nullable: false,
-                defaultValue: 0)
-                .Annotation("SqlServer:Identity", "1, 1");
+                defaultValue: 0);
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Doctors",
@@ -42,8 +41,7 @@ namespace CodeFirst.Migrations
                 table: "Doctors",
                 type: "int",
                 nullable: false,
-                defaultValue: 0)
-                .Annotation("SqlServer:Identity", "1, 1");
+                defaultValue: 0);
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Doctors",

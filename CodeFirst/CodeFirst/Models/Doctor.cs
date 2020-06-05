@@ -10,7 +10,6 @@ namespace CodeFirst.Models
     public class Doctor
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdDoctor { get; set; }
 
         [MaxLength(100)]

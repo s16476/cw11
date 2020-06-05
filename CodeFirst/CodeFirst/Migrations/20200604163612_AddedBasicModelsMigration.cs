@@ -11,8 +11,7 @@ namespace CodeFirst.Migrations
                 name: "Medicaments",
                 columns: table => new
                 {
-                    IdMedicament = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdMedicament = table.Column<int>(nullable: false),
                     Name = table.Column<string>(maxLength: 100, nullable: true),
                     Description = table.Column<string>(maxLength: 100, nullable: true),
                     Type = table.Column<string>(maxLength: 100, nullable: true)
@@ -26,8 +25,7 @@ namespace CodeFirst.Migrations
                 name: "Patients",
                 columns: table => new
                 {
-                    IdPatient = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdPatient = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(maxLength: 100, nullable: true),
                     LastName = table.Column<string>(maxLength: 100, nullable: true),
                     Birthdate = table.Column<DateTime>(nullable: false)
@@ -41,8 +39,7 @@ namespace CodeFirst.Migrations
                 name: "Prescription_Medicaments",
                 columns: table => new
                 {
-                    IdMedicament = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdMedicament = table.Column<int>(nullable: false),
                     Dose = table.Column<int>(nullable: false),
                     Details = table.Column<string>(maxLength: 100, nullable: true)
                 },
@@ -55,8 +52,7 @@ namespace CodeFirst.Migrations
                 name: "Prescriptions",
                 columns: table => new
                 {
-                    IdPrescription = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdPrescription = table.Column<int>(nullable: false),
                     Date = table.Column<DateTime>(nullable: false),
                     DueDate = table.Column<DateTime>(nullable: false)
                 },

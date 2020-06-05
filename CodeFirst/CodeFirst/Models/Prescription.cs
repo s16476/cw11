@@ -10,7 +10,6 @@ namespace CodeFirst.Models
     public class Prescription
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdPrescription { get; set; }
 
         [Required]

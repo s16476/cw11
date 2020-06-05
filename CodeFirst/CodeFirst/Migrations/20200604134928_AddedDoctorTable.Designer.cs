@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CodeFirst.Migrations
 {
-    [DbContext(typeof(HealthDbContext))]
+    [DbContext(typeof(MedicinesDbContext))]
     [Migration("20200604134928_AddedDoctorTable")]
     partial class AddedDoctorTable
     {

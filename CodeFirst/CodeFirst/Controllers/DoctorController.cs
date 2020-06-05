@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CodeFirst.Models;
+using CodeFirst.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,16 +14,21 @@ namespace CodeFirst.Controllers
     public class DoctorController : ControllerBase
     {
 
-        private readonly HealthDbContext context;
-        public DoctorController(HealthDbContext ctx) 
+        private readonly IMedicinesDbService context;
+        public DoctorController(IMedicinesDbService ctx) 
         {
             context = ctx;
         }
 
         [HttpGet]
-        public IActionResult GetPeople()
+        public IActionResult GetDoctors()
         {
-            return Ok();
+            return Ok(context.GetDoctors());
         }
+
+
+
+
+
     }
 }

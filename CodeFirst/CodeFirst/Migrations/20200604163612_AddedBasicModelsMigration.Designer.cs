@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CodeFirst.Migrations
 {
-    [DbContext(typeof(HealthDbContext))]
+    [DbContext(typeof(MedicinesDbContext))]
     [Migration("20200604163612_AddedBasicModelsMigration")]
     partial class AddedBasicModelsMigration
     {

@@ -14,7 +14,7 @@ namespace CodeFirst.Models
 
         public int IdPrescription { get; set; }
 
-        public int Dose { get; set; }
+        public int? Dose { get; set; }
 
         public string Details { get; set; }
 
